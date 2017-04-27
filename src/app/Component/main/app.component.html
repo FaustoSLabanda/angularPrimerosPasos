@@ -1,3 +1,27 @@
-<h1>{{producto.nombre}}</h1>
-<h2>Necesito {{producto.unidades}} a un precio de {{producto.precio}}</h2>
-<h2>{{producto.descripcion}}</h2>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Nuevo Producto</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <formulario-producto (onsubmit)="guardar($event)"></formulario-producto>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Productos a comprar</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <listado-productos [productos]="productosXXX"></listado-productos>
+            </div>
+        </div>
+    </div>
+</div>
+
+

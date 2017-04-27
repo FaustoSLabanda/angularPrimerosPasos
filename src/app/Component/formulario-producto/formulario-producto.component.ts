@@ -4,12 +4,12 @@ import{ Producto } from '../../Classes/Producto';
 @Component({
     moduleId:module.id,
     selector:'formulario-producto',
-    templateUrl:'formulario-producto.html'
+    templateUrl:'formulario-producto.component.html'
 })
 
 export class FormularioProductoComponent{
-    model : Producto= new Producto(0,'',0,0,'');
-    @Output()onsubmit = new EventEmitter<any>();
+    model : Producto = new Producto(0,'hlalal',0,0,'jjj');
+    @Output() onsubmit = new EventEmitter<any>();
     
     public submit(){
         this.onsubmit.emit(this.model);
