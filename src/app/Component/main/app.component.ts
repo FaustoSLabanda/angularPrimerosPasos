@@ -11,26 +11,26 @@ import { ListaCompraServiceAPI } from '../../Services/listaCompraApi-service/lis
 })
 export class AppComponent implements OnInit {
   productosXXX: Array<Producto> = [];
-  centros: Array<Centro> = [];
+  //centros: Array<Centro> = [];
   usuarios: Array<Usuario> = [];
 
   constructor(private servicio: ListaCompraService,
     private servicioApi: ListaCompraServiceAPI) { }
 
   ngOnInit() {
-    this.servicio.getPoductos().then(data => {
+    /*this.servicio.getPoductos().then(data => {
       this.productosXXX = data;
-    });
+    });*/
 
 
-    this.servicio.getUsuarios().then(data => {
+   /* this.servicio.getUsuarios().then(data => {
       this.usuarios = data;
-    });
+    });*/
 
-    this.servicioApi.getProductos().subscribe(data => {
+   /* this.servicioApi.getProductos().subscribe(data => {
       this.centros = data;
       console.log(this.centros);
-    });
+    });*/
   }
 
   guardar(model: Producto) {
