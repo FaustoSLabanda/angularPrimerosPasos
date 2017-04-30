@@ -1,6 +1,8 @@
 import { Component ,OnInit} from '@angular/core';
 import{ Producto } from '../../Classes/Producto';
+import {Centro} from '../../Classes/Centro';
 import { ListaCompraService} from '../../Services/listaCompraClases-service/listaComplaClase-service';
+import {ListaCompraServiceAPI} from '../../Services/listaCompraApi-service/listaCompraApi-service';
 @Component({
   moduleId:module.id,
   selector: 'my-app',
@@ -8,12 +10,19 @@ import { ListaCompraService} from '../../Services/listaCompraClases-service/list
 })
 export class AppComponent implements OnInit { 
     productosXXX : Array<Producto> =[];
+    centros : Array<Centro> =[];
 
-    constructor(private servicio : ListaCompraService){}
+    constructor(private servicio : ListaCompraService,
+                private servicioApi:ListaCompraServiceAPI){}
 
     ngOnInit(){
       this.servicio.getPoductos().then(data =>{
         this.productosXXX = data;
+      });
+
+      this.servicioApi.getProductos().subscribe(data=>{
+        this.centros = data;
+        console.log(this.centros);
       });
     }
 

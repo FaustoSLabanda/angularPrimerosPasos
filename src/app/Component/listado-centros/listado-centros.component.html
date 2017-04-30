@@ -1,0 +1,36 @@
+<table class="table table-striped">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            NOMBRE
+        </th>
+        <th>
+            PROVINCIA
+        </th>
+        <th>
+            POBLACION
+        </th>
+        <th>
+            CODIGO POSTAL
+        </th>
+    </tr>
+    <tr *ngFor="let item of centros;">
+        <td>
+            {{item.ID}}
+        </td>
+        <td>
+           {{item.Name}}
+        </td>
+        <td>
+            {{item.Provincia}}
+        </td>
+        <td>
+           {{item.Poblacion}}
+        </td>
+        <td>
+             {{item.Cp}}
+        </td>
+    </tr>
+</table>
