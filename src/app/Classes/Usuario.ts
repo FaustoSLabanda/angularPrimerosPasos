@@ -1,4 +1,10 @@
 export class Usuario{
-    Login:string;
-    Password:string;
+     constructor(public ID:number,
+                public Nombre:string,
+                public Apellidos:string,
+                public DNI:string,
+                public Email:string,
+                public Edad:number
+                ){}
+   
 } 
